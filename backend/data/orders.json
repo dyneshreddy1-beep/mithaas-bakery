@@ -1,0 +1,425 @@
+[
+  {
+    "orderId": "MT-28917",
+    "date": "11/07/2026, 21:52:39",
+    "status": "Pending",
+    "customer": {
+      "name": "KING VILLAN GAMER",
+      "email": "nainikadudduguta@gmail.com",
+      "phone": "9492039314",
+      "address": "Store Pickup (No Delivery Address)"
+    },
+    "items": [
+      {
+        "productId": "p1",
+        "name": "Kaju Katli",
+        "weight": "250 g",
+        "quantity": 1,
+        "price": 720.0,
+        "total": 720.0
+      }
+    ],
+    "subtotal": 720.0,
+    "shipping": 0.0,
+    "tax": 36.0,
+    "total": 756.0,
+    "paymentMethod": "Cash on Pickup",
+    "shippingMethod": "Store Pickup",
+    "fulfillment_method": "pickup",
+    "payment_method": "cash"
+  },
+  {
+    "orderId": "MT-75840",
+    "date": "11/07/2026, 21:50:07",
+    "status": "Pending",
+    "customer": {
+      "name": "Test Customer",
+      "email": "nainikadudduguta@gmail.com",
+      "phone": "919347611587",
+      "address": "Store Pickup (No Delivery Address)"
+    },
+    "items": [
+      {
+        "productId": "p1",
+        "name": "Kaju Katli",
+        "weight": "250 g",
+        "quantity": 1,
+        "price": 720.0,
+        "total": 720.0
+      }
+    ],
+    "subtotal": 720.0,
+    "shipping": 0.0,
+    "tax": 36.0,
+    "total": 756.0,
+    "paymentMethod": "Cash on Pickup",
+    "shippingMethod": "Store Pickup",
+    "fulfillment_method": "pickup",
+    "payment_method": "cash"
+  },
+  {
+    "orderId": "MT-65889",
+    "date": "11/07/2026, 21:45:49",
+    "status": "Pending",
+    "customer": {
+      "name": "Test Customer",
+      "email": "nainikadudduguta@gmail.com",
+      "phone": "919347611587",
+      "address": "Store Pickup (No Delivery Address)"
+    },
+    "items": [
+      {
+        "productId": "p1",
+        "name": "Kaju Katli",
+        "weight": "250 g",
+        "quantity": 1,
+        "price": 720.0,
+        "total": 720.0
+      }
+    ],
+    "subtotal": 720.0,
+    "shipping": 0.0,
+    "tax": 36.0,
+    "total": 756.0,
+    "paymentMethod": "Cash on Pickup",
+    "shippingMethod": "Store Pickup",
+    "fulfillment_method": "pickup",
+    "payment_method": "cash"
+  },
+  {
+    "orderId": "MT-20050",
+    "date": "11/07/2026, 21:41:07",
+    "status": "Pending",
+    "customer": {
+      "name": "nainika",
+      "email": "nainikadudduguta@gmail.com",
+      "phone": "9110345113",
+      "address": "Store Pickup (No Delivery Address)"
+    },
+    "items": [
+      {
+        "productId": "p1",
+        "name": "Kaju Katli",
+        "weight": "250 g",
+        "quantity": 1,
+        "price": 720.0,
+        "total": 720.0
+      }
+    ],
+    "subtotal": 720.0,
+    "shipping": 0.0,
+    "tax": 36.0,
+    "total": 756.0,
+    "paymentMethod": "Cash on Pickup",
+    "shippingMethod": "Store Pickup",
+    "fulfillment_method": "pickup",
+    "payment_method": "cash"
+  },
+  {
+    "orderId": "MT-43005",
+    "date": "11/07/2026, 21:35:23",
+    "status": "Pending",
+    "customer": {
+      "name": "Dynesh Reddy",
+      "email": "ingonood2@gmail.com",
+      "phone": "9492039314",
+      "address": "Store Pickup (No Delivery Address)"
+    },
+    "items": [
+      {
+        "productId": "p2",
+        "name": "Motichoor Laddu",
+        "weight": "250 g",
+        "quantity": 1,
+        "price": 540.0,
+        "total": 540.0
+      }
+    ],
+    "subtotal": 540.0,
+    "shipping": 0.0,
+    "tax": 27.0,
+    "total": 567.0,
+    "paymentMethod": "Cash on Pickup",
+    "shippingMethod": "Store Pickup",
+    "fulfillment_method": "pickup",
+    "payment_method": "cash"
+  },
+  {
+    "orderId": "MT-77740",
+    "date": "11/07/2026, 21:31:22",
+    "status": "Pending",
+    "customer": {
+      "name": "Dynesh Reddy",
+      "email": "dyneshreddy1@gmail.com",
+      "phone": "9492039314",
+      "address": "Store Pickup (No Delivery Address)"
+    },
+    "items": [
+      {
+        "productId": "p2",
+        "name": "Motichoor Laddu",
+        "weight": "250 g",
+        "quantity": 1,
+        "price": 540.0,
+        "total": 540.0
+      }
+    ],
+    "subtotal": 540.0,
+    "shipping": 0.0,
+    "tax": 27.0,
+    "total": 567.0,
+    "paymentMethod": "Cash on Pickup",
+    "shippingMethod": "Store Pickup",
+    "fulfillment_method": "pickup",
+    "payment_method": "cash"
+  },
+  {
+    "orderId": "MT-62576",
+    "date": "11/07/2026, 21:28:28",
+    "status": "Pending",
+    "customer": {
+      "name": "nainika",
+      "email": "nainikadudduguta@gmail.com",
+      "phone": "9110345113",
+      "address": "Store Pickup (No Delivery Address)"
+    },
+    "items": [
+      {
+        "productId": "p2",
+        "name": "Motichoor Laddu",
+        "weight": "250 g",
+        "quantity": 1,
+        "price": 540.0,
+        "total": 540.0
+      }
+    ],
+    "subtotal": 540.0,
+    "shipping": 0.0,
+    "tax": 27.0,
+    "total": 567.0,
+    "paymentMethod": "Cash on Pickup",
+    "shippingMethod": "Store Pickup",
+    "fulfillment_method": "pickup",
+    "payment_method": "cash"
+  },
+  {
+    "orderId": "MT-20215",
+    "date": "11/07/2026, 21:19:54",
+    "status": "Pending",
+    "customer": {
+      "name": "Dynesh Reddy",
+      "email": "nainikadudduguta@gmail.com",
+      "phone": "9113045113",
+      "address": "Store Pickup (No Delivery Address)"
+    },
+    "items": [],
+    "subtotal": 0.0,
+    "shipping": 0.0,
+    "tax": 0.0,
+    "total": 0.0,
+    "paymentMethod": "Cash on Pickup",
+    "shippingMethod": "Store Pickup",
+    "fulfillment_method": "pickup",
+    "payment_method": "cash"
+  },
+  {
+    "orderId": "MT-30799",
+    "date": "11/07/2026, 21:17:55",
+    "status": "Pending",
+    "customer": {
+      "name": "Dynesh Reddy",
+      "email": "nainikadudduguta@gmial.com",
+      "phone": "9110345113",
+      "address": "Store Pickup (No Delivery Address)"
+    },
+    "items": [
+      {
+        "productId": "p2",
+        "name": "Motichoor Laddu",
+        "weight": "250 g",
+        "quantity": 1,
+        "price": 540.0,
+        "total": 540.0
+      }
+    ],
+    "subtotal": 540.0,
+    "shipping": 0.0,
+    "tax": 27.0,
+    "total": 567.0,
+    "paymentMethod": "Cash on Pickup",
+    "shippingMethod": "Store Pickup",
+    "fulfillment_method": "pickup",
+    "payment_method": "cash"
+  },
+  {
+    "orderId": "MT-63187",
+    "date": "11/07/2026, 21:10:22",
+    "status": "Pending",
+    "customer": {
+      "name": "Dynesh Reddy",
+      "email": "nainikadudduguta@gmail.com",
+      "phone": "9110345113",
+      "address": "ROADNO10 BANDARY LAYOUT NIZAMPET SUAVN ARCADE/FLATNO-G5, Select, State - 500090"
+    },
+    "items": [
+      {
+        "productId": "p1",
+        "name": "Kaju Katli",
+        "weight": "250 g",
+        "quantity": 1,
+        "price": 720.0,
+        "total": 720.0
+      }
+    ],
+    "subtotal": 720.0,
+    "shipping": 99.0,
+    "tax": 36.0,
+    "total": 855.0,
+    "paymentMethod": "Cash on Delivery",
+    "shippingMethod": "Standard (next-day)",
+    "fulfillment_method": "delivery",
+    "payment_method": "cash"
+  },
+  {
+    "orderId": "MT-58943",
+    "date": "11/07/2026, 21:08:20",
+    "status": "Pending",
+    "customer": {
+      "name": "nanika",
+      "email": "nainikadudduguta@gamil.com",
+      "phone": "9110345113",
+      "address": "Store Pickup (No Delivery Address)"
+    },
+    "items": [
+      {
+        "productId": "p2",
+        "name": "Motichoor Laddu",
+        "weight": "250 g",
+        "quantity": 1,
+        "price": 540.0,
+        "total": 540.0
+      }
+    ],
+    "subtotal": 540.0,
+    "shipping": 0.0,
+    "tax": 27.0,
+    "total": 567.0,
+    "paymentMethod": "Cash on Pickup",
+    "shippingMethod": "Store Pickup",
+    "fulfillment_method": "pickup",
+    "payment_method": "cash"
+  },
+  {
+    "orderId": "MT-32526",
+    "date": "11/07/2026, 21:04:30",
+    "status": "Pending",
+    "customer": {
+      "name": "nanika",
+      "email": "nainikadudduguta@gmail.com",
+      "phone": "9110345113",
+      "address": "Store Pickup (No Delivery Address)"
+    },
+    "items": [
+      {
+        "productId": "p1",
+        "name": "Kaju Katli",
+        "weight": "250 g",
+        "quantity": 1,
+        "price": 720,
+        "total": 720
+      }
+    ],
+    "subtotal": 720,
+    "shipping": 0,
+    "tax": 36,
+    "total": 756,
+    "paymentMethod": "Cash on Pickup",
+    "shippingMethod": "Store Pickup",
+    "fulfillment_method": "pickup",
+    "payment_method": "cash"
+  },
+  {
+    "orderId": "MT-45259",
+    "date": "11/07/2026, 21:00:50",
+    "status": "Pending",
+    "customer": {
+      "name": "nainaka",
+      "email": "nainikadudduguta@gmail.com",
+      "phone": "9110345113",
+      "address": "Store Pickup (No Delivery Address)"
+    },
+    "items": [
+      {
+        "productId": "p10",
+        "name": "Badam Halwa",
+        "weight": "250 g",
+        "quantity": 1,
+        "price": 780,
+        "total": 780
+      }
+    ],
+    "subtotal": 780,
+    "shipping": 0,
+    "tax": 39,
+    "total": 819,
+    "paymentMethod": "Cash on Pickup",
+    "shippingMethod": "Store Pickup",
+    "fulfillment_method": "pickup",
+    "payment_method": "cash"
+  },
+  {
+    "orderId": "MT-59992",
+    "date": "11/07/2026, 20:53:23",
+    "status": "Pending",
+    "customer": {
+      "name": "nainika",
+      "email": "nainikadudduguta@gmail.com",
+      "phone": "9110345113",
+      "address": "Store Pickup (No Delivery Address)"
+    },
+    "items": [
+      {
+        "productId": "p1",
+        "name": "Kaju Katli",
+        "weight": "250 g",
+        "quantity": 1,
+        "price": 720,
+        "total": 720
+      }
+    ],
+    "subtotal": 720,
+    "shipping": 0,
+    "tax": 36,
+    "total": 756,
+    "paymentMethod": "Cash on Pickup",
+    "shippingMethod": "Store Pickup",
+    "fulfillment_method": "pickup",
+    "payment_method": "cash"
+  },
+  {
+    "orderId": "MT-75247",
+    "date": "7/10/2026, 12:32:47 PM",
+    "status": "Pending",
+    "customer": {
+      "name": "Dynesh Reddy",
+      "phone": "8019302351",
+      "address": "gfh, Select, State - 500090"
+    },
+    "items": [
+      {
+        "productId": "p2",
+        "name": "Motichoor Laddu",
+        "weight": "250 g",
+        "quantity": 1,
+        "price": 540,
+        "total": 540
+      }
+    ],
+    "subtotal": 540,
+    "shipping": 99,
+    "tax": 27,
+    "total": 666,
+    "paymentMethod": "UPI",
+    "shippingMethod": "Standard (next-day)"
+  }
+]

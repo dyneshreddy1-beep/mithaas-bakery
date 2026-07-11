@@ -1,0 +1,56 @@
+[
+  {
+    "id": "log-690896",
+    "timestamp": "11/07/2026, 21:50:08",
+    "recipient": "919347611587",
+    "type": "admin",
+    "message": "Mithaas Alert: New order #MT-75840 has been placed for a total of INR 756.0.",
+    "gateway": "greenapi",
+    "status": "Delivered (ID: 3EB092EA4EC03CB9802F6F)"
+  },
+  {
+    "id": "log-910164",
+    "timestamp": "11/07/2026, 21:50:07",
+    "recipient": "919347611587",
+    "type": "customer",
+    "message": "\ud83c\udf6c *Mithaas Sweets - Order Confirmed!* \ud83c\udf6c\n\nThank you *Test Customer*, for placing an order with us!\nHere is your order summary:\n\n*Order ID:* MT-75840\n*Date:* 11/07/2026, 21:50:07\n\n*Fulfillment:* Store Pickup\n*Payment Mode:* Cash on Pickup\n\n*Items:*\n\u2022 Kaju Katli (250 g) x 1 - INR 720.0\n\n*Subtotal:* INR 720.0\n*Shipping:* Free\n*GST Tax:* INR 36.0\n*Grand Total:* INR 756.0\n\n*Shipping/Pickup Address:*\nStore Pickup (No Delivery Address)\n\nWe are preparing your sweets fresh. A confirmation will be sent when your box is dispatched! \u2728",
+    "gateway": "greenapi",
+    "status": "Delivered (ID: 3EB01673422FD38752D830)"
+  },
+  {
+    "id": "log-838368",
+    "timestamp": "11/07/2026, 21:45:51",
+    "recipient": "919347611587",
+    "type": "admin",
+    "message": "Mithaas Alert: New order #MT-65889 has been placed for a total of INR 756.0.",
+    "gateway": "greenapi",
+    "status": "Delivered (ID: 3EB0A6CE29878291EF480B)"
+  },
+  {
+    "id": "log-793006",
+    "timestamp": "11/07/2026, 21:45:49",
+    "recipient": "919347611587",
+    "type": "customer",
+    "message": "\ud83c\udf6c *Mithaas Sweets - Order Confirmed!* \ud83c\udf6c\n\nThank you *Test Customer*, for placing an order with us!\nHere is your order summary:\n\n*Order ID:* MT-65889\n*Date:* 11/07/2026, 21:45:49\n\n*Fulfillment:* Store Pickup\n*Payment Mode:* Cash on Pickup\n\n*Items:*\n\u2022 Kaju Katli (250 g) x 1 - INR 720.0\n\n*Subtotal:* INR 720.0\n*Shipping:* Free\n*GST Tax:* INR 36.0\n*Grand Total:* INR 756.0\n\n*Shipping/Pickup Address:*\nStore Pickup (No Delivery Address)\n\nWe are preparing your sweets fresh. A confirmation will be sent when your box is dispatched! \u2728",
+    "gateway": "greenapi",
+    "status": "Delivered (ID: 3EB01D68089C47DEE7279D)"
+  },
+  {
+    "id": "log-220370",
+    "timestamp": "7/10/2026, 12:32:47 PM",
+    "recipient": "919347611587",
+    "type": "admin",
+    "message": "\ud83d\udd14 *New Mithaas Order Received!* \ud83d\udd14\n\n*Order ID:* MT-75247\n*Customer:* Dynesh Reddy\n*Phone:* 8019302351\n\n*Items Ordered:*\n\u2022 Motichoor Laddu (250 g) x 1 - \u20b9540\n\n*Total Revenue:* \u20b9666\n*Payment Method:* UPI\n\n*Shipping Address:*\ngfh, Select, State - 500090\n\nPlease check the admin portal to manage this order: http://localhost:3001/admin \ud83c\udf6c",
+    "gateway": "ultramsg",
+    "status": "Delivered"
+  },
+  {
+    "id": "log-677532",
+    "timestamp": "7/10/2026, 12:32:47 PM",
+    "recipient": "918019302351",
+    "type": "customer",
+    "message": "\ud83c\udf6c *Mithaas Sweets - Order Confirmed!* \ud83c\udf6c\n\nThank you *Dynesh Reddy*, for placing an order with us!\nHere is your order summary:\n\n*Order ID:* MT-75247\n*Date:* 7/10/2026, 12:32:47 PM\n\n*Items:*\n\u2022 Motichoor Laddu (250 g) x 1 - \u20b9540\n\n*Subtotal:* \u20b9540\n*Shipping:* \u20b999\n*GST Tax:* \u20b927\n*Grand Total:* \u20b9666\n\n*Delivery Address:*\ngfh, Select, State - 500090\n\n*Payment Mode:* UPI\n\nWe are preparing your sweets fresh. A confirmation will be sent when your box is dispatched! \u2728",
+    "gateway": "ultramsg",
+    "status": "Delivered"
+  }
+]

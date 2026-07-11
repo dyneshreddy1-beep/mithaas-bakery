@@ -1,0 +1,72 @@
+[
+  {
+    "id": "p1",
+    "slug": "kaju-katli",
+    "name": "Kaju Katli",
+    "category": "Kaju Sweets",
+    "price": 720
+  },
+  {
+    "id": "p2",
+    "slug": "motichoor-laddu",
+    "name": "Motichoor Laddu",
+    "category": "Milk Sweets",
+    "price": 540
+  },
+  {
+    "id": "p3",
+    "slug": "mysore-pak",
+    "name": "Royal Mysore Pak",
+    "category": "Milk Sweets",
+    "price": 480
+  },
+  {
+    "id": "p4",
+    "slug": "rasgulla",
+    "name": "Bengali Rasgulla",
+    "category": "Milk Sweets",
+    "price": 360
+  },
+  {
+    "id": "p5",
+    "slug": "dry-fruit-laddu",
+    "name": "Dry Fruit Laddu",
+    "category": "Dry Fruit",
+    "price": 890
+  },
+  {
+    "id": "p6",
+    "slug": "milk-cake",
+    "name": "Alwari Milk Cake",
+    "category": "Milk Sweets",
+    "price": 460
+  },
+  {
+    "id": "p7",
+    "slug": "kesar-peda",
+    "name": "Kesar Peda",
+    "category": "Milk Sweets",
+    "price": 520
+  },
+  {
+    "id": "p8",
+    "slug": "rasmalai",
+    "name": "Kesar Rasmalai",
+    "category": "Milk Sweets",
+    "price": 580
+  },
+  {
+    "id": "p9",
+    "slug": "diwali-royale-hamper",
+    "name": "Diwali Royale Hamper",
+    "category": "Gift Hampers",
+    "price": 2499
+  },
+  {
+    "id": "p10",
+    "slug": "badam-halwa",
+    "name": "Badam Halwa",
+    "category": "Dry Fruit",
+    "price": 780
+  }
+]
