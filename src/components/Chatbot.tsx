@@ -45,7 +45,8 @@ export function Chatbot() {
       }
 
       const data = await response.json();
-      const botMessage: Message = { sender: "bot", text: data.reply || "Something went wrong. I suggest Kaju Katli!" };
+      const botReply = data.reply;
+      const botMessage: Message = { sender: "bot", text: botReply || "Something went wrong. I suggest Kaju Katli!" };
       setChatLog(prev => [...prev, botMessage]);
     } catch (error) {
       console.error("Chatbot Error:", error);
