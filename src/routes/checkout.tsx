@@ -303,14 +303,14 @@ function CheckoutPage() {
           </div>
         </div>
 
-        <aside className="card-luxe h-fit p-6 lg:sticky lg:top-24">
+        <aside className="card-luxe h-fit p-4 sm:p-6 lg:sticky lg:top-24 w-full max-w-full">
           <div className="font-display text-xl">Summary</div>
           <dl className="mt-4 space-y-2 text-sm">
             <Row label="Subtotal" value={inr(cartSubtotal)} />
             <Row label="Shipping" value={shippingCost === 0 ? "Free" : inr(shippingCost)} />
             <Row label="Taxes" value={inr(Math.round(cartSubtotal * 0.05))} />
           </dl>
-          <div className="mt-4 flex justify-between border-t border-border pt-4">
+          <div className="mt-4 flex justify-between items-center border-t border-border pt-4 w-full">
             <span className="font-display">Total</span>
             <span className="font-display text-primary text-lg">{inr(total)}</span>
           </div>
@@ -361,5 +361,10 @@ function Input(props: React.InputHTMLAttributes<HTMLInputElement>) {
 }
 
 function Row({ label, value }: { label: string; value: string }) {
-  return <div className="flex justify-between"><dt className="text-muted-foreground">{label}</dt><dd>{value}</dd></div>;
+  return (
+    <div className="flex justify-between items-center w-full">
+      <dt className="text-muted-foreground">{label}</dt>
+      <dd>{value}</dd>
+    </div>
+  );
 }

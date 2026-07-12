@@ -65,7 +65,7 @@ function CartPage() {
             })}
           </ul>
 
-          <aside className="card-luxe h-fit p-6 lg:sticky lg:top-24">
+          <aside className="card-luxe h-fit p-4 sm:p-6 lg:sticky lg:top-24 w-full max-w-full">
             <div className="font-display text-xl">Order summary</div>
             <dl className="mt-4 space-y-2.5 text-sm">
               <Row label="Subtotal" value={inr(cartSubtotal)} />
@@ -73,29 +73,30 @@ function CartPage() {
               <Row label="Shipping" value={shipping === 0 ? "Free" : inr(shipping)} />
               <Row label="Taxes (5% GST)" value={inr(tax)} />
             </dl>
-            <div className="mt-4 flex items-center justify-between border-t border-border pt-4">
+            <div className="mt-4 flex items-center justify-between border-t border-border pt-4 w-full">
               <span className="font-display text-lg">Total</span>
               <span className="font-display text-2xl text-primary">{inr(total)}</span>
             </div>
-            <div className="mt-5">
+            <div className="mt-5 w-full">
               <label className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">Coupon</label>
-              <div className="mt-1.5 flex gap-2">
-                <div className="flex flex-1 items-center rounded-full border border-border px-4">
-                  <Tag size={14} className="text-muted-foreground" />
+              <div className="mt-1.5 flex flex-col sm:flex-row gap-2 w-full">
+                <div className="flex flex-1 items-center rounded-full border border-border px-4 w-full">
+                  <Tag size={14} className="text-muted-foreground shrink-0" />
                   <input value={code} onChange={(e) => setCode(e.target.value.toUpperCase())} placeholder="Enter code"
-                    className="ml-2 flex-1 bg-transparent py-2.5 text-sm outline-none" />
+                    className="ml-2 flex-1 bg-transparent py-2.5 text-sm outline-none w-full" />
                 </div>
                 <button
+                  type="button"
                   onClick={() => {
                     const c = coupons[code];
                     if (c) { setApplied({ code, discount: c.discount }); toast.success(c.label); }
                     else { toast.error("Invalid coupon"); }
                   }}
-                  className="rounded-full bg-secondary px-5 text-xs font-semibold uppercase tracking-widest hover:bg-secondary/80">Apply</button>
+                  className="rounded-full bg-secondary py-3 px-5 text-xs font-semibold uppercase tracking-widest hover:bg-secondary/80 w-full sm:w-auto shrink-0">Apply</button>
               </div>
               <p className="mt-2 text-xs text-muted-foreground">Try <b>DIWALI10</b>, <b>MITHAAS15</b>, or <b>FESTIVE20</b>.</p>
             </div>
-            <Link to="/checkout" className="mt-6 block rounded-full bg-primary py-4 text-center text-xs font-semibold uppercase tracking-widest text-primary-foreground shadow-luxe hover:bg-[color:var(--maroon-hover)]">
+            <Link to="/checkout" className="mt-6 block rounded-full bg-primary py-4 text-center text-xs font-semibold uppercase tracking-widest text-primary-foreground shadow-luxe hover:bg-[color:var(--maroon-hover)] w-full">
               Proceed to checkout
             </Link>
             <p className="mt-3 text-center text-xs text-muted-foreground">Free shipping on orders above ₹999.</p>
@@ -115,7 +116,7 @@ function CartPage() {
 
 function Row({ label, value, accent }: { label: string; value: string; accent?: boolean }) {
   return (
-    <div className="flex justify-between">
+    <div className="flex justify-between items-center w-full">
       <dt className="text-muted-foreground">{label}</dt>
       <dd className={accent ? "text-[color:var(--success)] font-semibold" : ""}>{value}</dd>
     </div>
