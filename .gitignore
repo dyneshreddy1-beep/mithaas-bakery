@@ -38,6 +38,7 @@ dist-ssr
 
 # Python Virtual Environments & Caches
 .venv
+venv
 env
 vh1
 node_modules
