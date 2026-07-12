@@ -322,48 +322,54 @@ async def chat_with_sweet_ai(payload: ChatRequestSchema):
             reply = "Happy birthday! 🍬 I highly recommend our Premium Assorted Platters, Kaju Katli, or Royal Gift Hampers to celebrate your special day in sweet traditional style!"
         elif "festival" in msg or "party" in msg:
             reply = "Festivities call for the classics! 🪔 I suggest our rich Milk Sweets, Laddus, or Rasgullas to share the joy."
+        elif "sugar" in msg or "diabetic" in msg or "diet" in msg:
+            reply = "We care about your health! 🌿 I highly recommend our Sugar-Free Dry Fruit Laddus or Sugar-Free Kaju Katli, sweetened naturally without compromising on taste."
         else:
-            reply = "Welcome to Mithaas! 🧁 What occasion can I help you sweeten today? We offer fine traditional laddus, premium dry fruit platters, and custom hampers."
+            reply = "Welcome to Mithaas! 🧁 What occasion or sweet preference can I help you with today? We offer fine traditional sweets, premium hampers, and sugar-free options."
         return {"reply": reply}
         
     try:
         try:
+            # gemini-flash-latest is verified working for this API key
             model = genai.GenerativeModel(
-                model_name="gemini-2.5-flash",
+                model_name="gemini-flash-latest",
                 system_instruction=(
                     "You are an expert traditional Indian sweets connoisseur for 'Mithaas Bakery'. "
-                    "Your job is to recommend the perfect sweets based on the customer's occasion. "
+                    "Your job is to recommend the perfect sweets based on the customer's occasion or dietary restrictions. "
                     "If they mention a birthday, enthusiastically recommend our Premium Assorted Platters, Kaju Katli, or Royal Gift Hampers. "
                     "If they mention a festival or party, suggest classic Milk Sweets, Ladoos, or Rasgullas. "
+                    "If they mention diabetes, sugar issues, or request sugar-free options, recommend our Sugar-Free Dry Fruit Laddus, Sugar-Free Kaju Katli, or stevia-sweetened treats. "
                     "Keep responses warm, festive, friendly, and under 3 sentences."
                 )
             )
             response = model.generate_content(payload.message)
         except Exception as model_err:
             safe_err = str(model_err).encode('ascii', errors='ignore').decode('ascii')
-            print(f"[GEMINI WARNING] gemini-2.5-flash failed, trying gemini-2.0-flash: {safe_err}", flush=True)
+            print(f"[GEMINI WARNING] gemini-flash-latest failed, trying gemini-2.0-flash: {safe_err}", flush=True)
             try:
                 model = genai.GenerativeModel(
                     model_name="gemini-2.0-flash",
                     system_instruction=(
                         "You are an expert traditional Indian sweets connoisseur for 'Mithaas Bakery'. "
-                        "Your job is to recommend the perfect sweets based on the customer's occasion. "
+                        "Your job is to recommend the perfect sweets based on the customer's occasion or dietary restrictions. "
                         "If they mention a birthday, enthusiastically recommend our Premium Assorted Platters, Kaju Katli, or Royal Gift Hampers. "
                         "If they mention a festival or party, suggest classic Milk Sweets, Ladoos, or Rasgullas. "
+                        "If they mention diabetes, sugar issues, or request sugar-free options, recommend our Sugar-Free Dry Fruit Laddus, Sugar-Free Kaju Katli, or stevia-sweetened treats. "
                         "Keep responses warm, festive, friendly, and under 3 sentences."
                     )
                 )
                 response = model.generate_content(payload.message)
             except Exception as model_err2:
                 safe_err2 = str(model_err2).encode('ascii', errors='ignore').decode('ascii')
-                print(f"[GEMINI WARNING] gemini-2.0-flash failed, trying gemini-1.5-flash: {safe_err2}", flush=True)
+                print(f"[GEMINI WARNING] gemini-2.0-flash failed, trying gemini-2.5-flash: {safe_err2}", flush=True)
                 model = genai.GenerativeModel(
-                    model_name="gemini-1.5-flash",
+                    model_name="gemini-2.5-flash",
                     system_instruction=(
                         "You are an expert traditional Indian sweets connoisseur for 'Mithaas Bakery'. "
-                        "Your job is to recommend the perfect sweets based on the customer's occasion. "
+                        "Your job is to recommend the perfect sweets based on the customer's occasion or dietary restrictions. "
                         "If they mention a birthday, enthusiastically recommend our Premium Assorted Platters, Kaju Katli, or Royal Gift Hampers. "
                         "If they mention a festival or party, suggest classic Milk Sweets, Ladoos, or Rasgullas. "
+                        "If they mention diabetes, sugar issues, or request sugar-free options, recommend our Sugar-Free Dry Fruit Laddus, Sugar-Free Kaju Katli, or stevia-sweetened treats. "
                         "Keep responses warm, festive, friendly, and under 3 sentences."
                     )
                 )
@@ -377,8 +383,10 @@ async def chat_with_sweet_ai(payload: ChatRequestSchema):
             reply = "Happy birthday! 🍬 I highly recommend our Premium Assorted Platters, Kaju Katli, or Royal Gift Hampers to celebrate your special day in sweet traditional style!"
         elif "festival" in msg or "party" in msg:
             reply = "Festivities call for the classics! 🪔 I suggest our rich Milk Sweets, Laddus, or Rasgullas to share the joy."
+        elif "sugar" in msg or "diabetic" in msg or "diet" in msg:
+            reply = "We care about your health! 🌿 I highly recommend our Sugar-Free Dry Fruit Laddus or Sugar-Free Kaju Katli, sweetened naturally without compromising on taste."
         else:
-            reply = "Welcome to Mithaas! 🧁 What occasion can I help you sweeten today?"
+            reply = "Welcome to Mithaas! 🧁 What occasion or sweet preference can I help you with today?"
         return {"reply": reply}
 
 @app.post("/api/orders", status_code=201)
