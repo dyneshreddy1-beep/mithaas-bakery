@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { MessageSquare, X, Send, Sparkles, Loader2 } from "lucide-react";
 import { toast } from "sonner";
+import { cn } from "@/lib/utils";
 
 interface Message {
   sender: "user" | "bot";
@@ -76,7 +77,7 @@ export function Chatbot() {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 font-sans">
+    <div className={cn("fixed bottom-6 right-6 z-50 font-sans", isOpen && "max-sm:left-6")}>
       {/* Floating Trigger Button */}
       {!isOpen && (
         <button
@@ -90,7 +91,7 @@ export function Chatbot() {
 
       {/* Chat Window Popup */}
       {isOpen && (
-        <div className="flex h-[460px] w-[340px] flex-col rounded-2xl border border-primary/20 bg-card text-card-foreground shadow-2xl overflow-hidden transition-all duration-300 md:w-[380px]">
+        <div className="flex h-[460px] w-full sm:w-[340px] flex-col rounded-2xl border border-primary/20 bg-card text-card-foreground shadow-2xl overflow-hidden transition-all duration-300 md:w-[380px]">
           {/* Header */}
           <header className="flex items-center justify-between bg-primary px-4 py-3.5 text-primary-foreground">
             <div className="flex items-center gap-2">

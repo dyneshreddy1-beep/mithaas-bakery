@@ -81,7 +81,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   head: () => ({
     meta: [
       { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: "viewport", content: "width=device-width, initial-scale=1.0" },
       { title: "Mithaas — Authentic Indian Sweets, Crafted with Tradition" },
       { name: "description", content: "Handcrafted Indian mithai made in copper pots and pure A2 ghee since 1972. Kaju Katli, Motichoor Laddu, Rasmalai, festive hampers — delivered fresh across India." },
       { name: "author", content: "Mithaas" },
