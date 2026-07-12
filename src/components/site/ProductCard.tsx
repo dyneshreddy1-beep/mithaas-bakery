@@ -46,7 +46,7 @@ export function ProductCard({ product, index = 0 }: { product: Product; index?: 
           <button
             type="button"
             aria-label={wished ? "Remove from wishlist" : "Add to wishlist"}
-            onClick={(e) => { e.preventDefault(); toggleWishlist(product.id); toast.success(wished ? "Removed from wishlist" : "Added to wishlist"); }}
+            onClick={(e) => { e.preventDefault(); e.stopPropagation(); toggleWishlist(product.id); toast.success(wished ? "Removed from wishlist" : "Added to wishlist"); }}
             className={cn(
               "grid h-9 w-9 place-items-center rounded-full backdrop-blur-md border border-white/40 transition",
               wished ? "bg-primary text-primary-foreground" : "bg-white/70 text-primary hover:bg-white"
@@ -55,10 +55,10 @@ export function ProductCard({ product, index = 0 }: { product: Product; index?: 
             <Heart size={16} className={wished ? "fill-current" : ""} />
           </button>
         </div>
-        <div className="absolute inset-x-3 bottom-3 flex translate-y-2 items-center gap-2 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+        <div className="absolute inset-x-3 bottom-3 flex items-center gap-2 transition-all duration-300 translate-y-0 opacity-100 sm:translate-y-2 sm:opacity-0 sm:group-hover:translate-y-0 sm:group-hover:opacity-100">
           <button
             type="button"
-            onClick={(e) => { e.preventDefault(); addToCart(product.id); toast.success(`${product.name} added to cart`); }}
+            onClick={(e) => { e.preventDefault(); e.stopPropagation(); addToCart(product.id); toast.success(`${product.name} added to cart`); }}
             className="flex-1 rounded-full bg-primary px-4 py-2.5 text-xs font-semibold tracking-wide text-primary-foreground shadow-lg hover:bg-[color:var(--maroon-hover)] transition"
           >
             <ShoppingBag size={14} className="inline mr-1.5 -mt-0.5" /> Add to cart
