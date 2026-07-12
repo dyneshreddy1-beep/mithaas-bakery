@@ -9,6 +9,7 @@ from fastapi.middleware.cors import CORSMiddleware
 import httpx
 from dotenv import load_dotenv
 from pydantic import BaseModel
+import google.generativeai as genai
 
 # Force UTF-8 stdout encoding on Windows
 if hasattr(sys.stdout, "reconfigure"):
@@ -21,6 +22,9 @@ if hasattr(sys.stderr, "reconfigure"):
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 dotenv_path = os.path.join(BASE_DIR, "..", ".env")
 load_dotenv(dotenv_path)
+
+# Configure Generative AI
+genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 # Verify loaded configs
 print(f"[ENV_LOAD] Loaded WHATSAPP_GATEWAY: {os.getenv('WHATSAPP_GATEWAY')}")
@@ -304,6 +308,78 @@ def delete_order(id: str):
 @app.get("/api/whatsapp-logs")
 def get_whatsapp_logs():
     return read_json_file(LOGS_FILE, [])
+
+class ChatRequestSchema(BaseModel):
+    message: str
+
+@app.post("/api/chat")
+async def chat_with_sweet_ai(payload: ChatRequestSchema):
+    api_key = os.getenv("GEMINI_API_KEY")
+    if not api_key:
+        print("[MOCK CHAT] GEMINI_API_KEY is not configured in .env. Falling back to rule-based mock response.", flush=True)
+        msg = payload.message.lower()
+        if "birthday" in msg:
+            reply = "Happy birthday! 🍬 I highly recommend our Premium Assorted Platters, Kaju Katli, or Royal Gift Hampers to celebrate your special day in sweet traditional style!"
+        elif "festival" in msg or "party" in msg:
+            reply = "Festivities call for the classics! 🪔 I suggest our rich Milk Sweets, Laddus, or Rasgullas to share the joy."
+        else:
+            reply = "Welcome to Mithaas! 🧁 What occasion can I help you sweeten today? We offer fine traditional laddus, premium dry fruit platters, and custom hampers."
+        return {"reply": reply}
+        
+    try:
+        try:
+            model = genai.GenerativeModel(
+                model_name="gemini-2.5-flash",
+                system_instruction=(
+                    "You are an expert traditional Indian sweets connoisseur for 'Mithaas Bakery'. "
+                    "Your job is to recommend the perfect sweets based on the customer's occasion. "
+                    "If they mention a birthday, enthusiastically recommend our Premium Assorted Platters, Kaju Katli, or Royal Gift Hampers. "
+                    "If they mention a festival or party, suggest classic Milk Sweets, Ladoos, or Rasgullas. "
+                    "Keep responses warm, festive, friendly, and under 3 sentences."
+                )
+            )
+            response = model.generate_content(payload.message)
+        except Exception as model_err:
+            safe_err = str(model_err).encode('ascii', errors='ignore').decode('ascii')
+            print(f"[GEMINI WARNING] gemini-2.5-flash failed, trying gemini-2.0-flash: {safe_err}", flush=True)
+            try:
+                model = genai.GenerativeModel(
+                    model_name="gemini-2.0-flash",
+                    system_instruction=(
+                        "You are an expert traditional Indian sweets connoisseur for 'Mithaas Bakery'. "
+                        "Your job is to recommend the perfect sweets based on the customer's occasion. "
+                        "If they mention a birthday, enthusiastically recommend our Premium Assorted Platters, Kaju Katli, or Royal Gift Hampers. "
+                        "If they mention a festival or party, suggest classic Milk Sweets, Ladoos, or Rasgullas. "
+                        "Keep responses warm, festive, friendly, and under 3 sentences."
+                    )
+                )
+                response = model.generate_content(payload.message)
+            except Exception as model_err2:
+                safe_err2 = str(model_err2).encode('ascii', errors='ignore').decode('ascii')
+                print(f"[GEMINI WARNING] gemini-2.0-flash failed, trying gemini-1.5-flash: {safe_err2}", flush=True)
+                model = genai.GenerativeModel(
+                    model_name="gemini-1.5-flash",
+                    system_instruction=(
+                        "You are an expert traditional Indian sweets connoisseur for 'Mithaas Bakery'. "
+                        "Your job is to recommend the perfect sweets based on the customer's occasion. "
+                        "If they mention a birthday, enthusiastically recommend our Premium Assorted Platters, Kaju Katli, or Royal Gift Hampers. "
+                        "If they mention a festival or party, suggest classic Milk Sweets, Ladoos, or Rasgullas. "
+                        "Keep responses warm, festive, friendly, and under 3 sentences."
+                    )
+                )
+                response = model.generate_content(payload.message)
+        return {"reply": response.text.strip()}
+    except Exception as e:
+        safe_exc = str(e).encode('ascii', errors='ignore').decode('ascii')
+        print(f"[GEMINI EXCEPTION] Generative AI error: {safe_exc}", flush=True)
+        msg = payload.message.lower()
+        if "birthday" in msg:
+            reply = "Happy birthday! 🍬 I highly recommend our Premium Assorted Platters, Kaju Katli, or Royal Gift Hampers to celebrate your special day in sweet traditional style!"
+        elif "festival" in msg or "party" in msg:
+            reply = "Festivities call for the classics! 🪔 I suggest our rich Milk Sweets, Laddus, or Rasgullas to share the joy."
+        else:
+            reply = "Welcome to Mithaas! 🧁 What occasion can I help you sweeten today?"
+        return {"reply": reply}
 
 @app.post("/api/orders", status_code=201)
 async def create_order(request: Request, background_tasks: BackgroundTasks):

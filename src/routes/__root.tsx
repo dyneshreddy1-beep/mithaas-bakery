@@ -15,6 +15,7 @@ import { Navbar } from "@/components/site/Navbar";
 import { Footer } from "@/components/site/Footer";
 import { StoreProvider } from "@/lib/store";
 import { Toaster } from "@/components/ui/sonner";
+import { Chatbot } from "@/components/Chatbot";
 
 function NotFoundComponent() {
   return (
@@ -132,11 +133,14 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <StoreProvider>
-        <Navbar />
-        <main className="min-h-[60vh]">
-          <Outlet />
-        </main>
-        <Footer />
+        <div className="min-h-screen flex flex-col max-w-full overflow-x-hidden">
+          <Navbar />
+          <main className="min-h-[60vh] flex-grow">
+            <Outlet />
+          </main>
+          <Footer />
+          <Chatbot />
+        </div>
         <Toaster position="bottom-right" richColors />
       </StoreProvider>
     </QueryClientProvider>
