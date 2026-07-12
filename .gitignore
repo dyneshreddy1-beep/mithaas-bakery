@@ -35,3 +35,11 @@ dist-ssr
 .env
 .env.local
 .env.*
+
+# Python Virtual Environments & Caches
+.venv
+env
+vh1
+node_modules
+__pycache__
+*.pyc
