@@ -2,9 +2,6 @@
   "functions": {
     "api/index.py": {
       "includeFiles": "backend/**"
-    },
-    "**/*": {
-      "excludeFiles": ".lovable/**"
     }
   },
   "rewrites": [
@@ -13,7 +10,7 @@
       "destination": "/api/index.py"
     },
     {
-      "source": "/(.*)",
+      "source": "/admin",
       "destination": "/index.html"
     }
   ]
